@@ -64,7 +64,7 @@ def checkAddress(email):
             if i < 10:
                 print("[" + str(i) + "]" + "     " + INFO + "Domain Name: {}".format(row["Title"]) + ENDC)
             else:
-                print("[" + str(i) + "]" + "    " + INFO + "Service Name: {}".format(row["Title"]) + ENDC)
+                print("[" + str(i) + "]" + "    " + INFO + "Domain Name: {}".format(row["Title"]) + ENDC)
             print("     " + INFO + "   Breach Date: {} ".format(row["BreachDate"].split("-")[0]) + ENDC)
             print("     " + INFO + "   Data leaked: {} ".format(', '.join(row["DataClasses"])) + ENDC)
             print("\n\n")
