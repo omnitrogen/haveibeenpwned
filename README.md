@@ -1,6 +1,6 @@
 # haveibeenpwned
 
-Python script to verify single or multiple email addresses for *pwnage* :fire:
+Python script to verify a single address or multiple email addresses for *pwnage* :fire:
 
 ## **Usage**:
 
