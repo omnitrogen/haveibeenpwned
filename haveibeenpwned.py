@@ -51,7 +51,7 @@ def checkAddress(email):
     check = requests.get("https://" + server + "/api/v2/breachedaccount/" + email + "?includeUnverified=true",
                  proxies = proxies,
                  verify = sslVerify)
-    
+
     if str(check.status_code) == "404": # The address has not been breached.
         print(OKGREEN + "[i] " + email + " has not been breached." + ENDC)
         time.sleep(sleep) # sleep so that we don't trigger the rate limit
@@ -62,7 +62,7 @@ def checkAddress(email):
         i = 1
         for row in json_data:
             if i < 10:
-                print("[" + str(i) + "]" + "     " + INFO + "Service Name: {}".format(row["Title"]) + ENDC)
+                print("[" + str(i) + "]" + "     " + INFO + "Domain Name: {}".format(row["Title"]) + ENDC)
             else:
                 print("[" + str(i) + "]" + "    " + INFO + "Service Name: {}".format(row["Title"]) + ENDC)
             print("     " + INFO + "   Breach Date: {} ".format(row["BreachDate"].split("-")[0]) + ENDC)
